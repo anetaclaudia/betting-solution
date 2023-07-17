@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RandomNumberBettingApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(RandomNumberBettingApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(RandomNumberBettingApplication.class, args);
+  }
 
 }

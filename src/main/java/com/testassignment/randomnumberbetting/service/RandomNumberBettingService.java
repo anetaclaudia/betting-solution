@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RandomNumberBettingService {
 
-  private final BigDecimal NINETY_NINE = BigDecimal.valueOf(99);
-  private final BigDecimal HUNDRED = BigDecimal.valueOf(100);
+  private static final BigDecimal NINETY_NINE = BigDecimal.valueOf(99);
+  private static final BigDecimal HUNDRED = BigDecimal.valueOf(100);
 
   public BetResponse betRandomNumber(BetRequest request) {
     // Formula for win: bet * (99 / (100 - number))
