@@ -16,7 +16,17 @@ public class RandomNumberBettingServiceTest {
 
     BetResponse actual = service.betRandomNumber(request);
 
-    assert(expected.win().equals(actual.win()));
+    assert (expected.win().equals(actual.win()));
+  }
+
+  @Test
+  public void shouldNotReturnWin_whenRandomNumberIs100() {
+    BetRequest request = new BetRequest(100, BigDecimal.valueOf(40.5));
+    BetResponse excpected = new BetResponse(BigDecimal.ZERO);
+
+    BetResponse actual = service.betRandomNumber(request);
+
+    assert (excpected.win().equals(actual.win()));
   }
 
 }
